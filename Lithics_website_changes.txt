@@ -1,0 +1,39 @@
+Lithics:
+
+Home page:
+01) Color of header.
+02) Make connect options clickable in header.
+03) The way categories look on hover.
+04) Content and Links on products.
+05) Color of fashion blocks.
+06) Content of policy at the bottom.
+07) Footer change.
+// 08) If user is logged in, onClick external doesnt work.
+// 09) Even if I am logged out of my account, my cart is not empty!
+
+Deals:
+01) Should be center aligned? Or redesign UI (Left pane).
+
+
+My Account:
+01) Address book entries are not proper in Account Dashboard.
+02) Forgot password not available.
+03) Subscribe to General newsletter. What is this?
+
+Mails:
+01) Footer: Thank You,\nKeep shopping with Lithics.in!
+02) Mail head is not authenticated.
+03) Which mails are sent from which email ID?
+
+
+Misc:
+// 01) On choosing Bags category, on the left pane, brands are (Sling Bag and Slide Bag???) and no product is from those brands.
+02) Submit review: Your review has been submitted for moderation??
+03) Zooming the bag using hover feature kills the quality.
+04) We can share a product page using email. 
+And email ID is editable! :D
+05) On sharing product on FB, it doesnt take product image or name.
+06) Link Youtube. Change channel name.
+
+
+
