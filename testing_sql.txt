@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 10, 2016 at 06:14 PM
+-- Generation Time: Oct 03, 2016 at 11:29 PM
 -- Server version: 5.5.46
 -- PHP Version: 5.5.36
 
@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `adminnotification_inbox` (
   KEY `IDX_ADMINNOTIFICATION_INBOX_SEVERITY` (`severity`),
   KEY `IDX_ADMINNOTIFICATION_INBOX_IS_READ` (`is_read`),
   KEY `IDX_ADMINNOTIFICATION_INBOX_IS_REMOVE` (`is_remove`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Adminnotification Inbox' AUTO_INCREMENT=102 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Adminnotification Inbox' AUTO_INCREMENT=104 ;
 
 --
 -- Dumping data for table `adminnotification_inbox`
@@ -146,7 +146,9 @@ INSERT INTO `adminnotification_inbox` (`notification_id`, `severity`, `date_adde
 (98, 1, '2016-02-24 08:06:43', 'Important: Updates to SUPEE-7405 Security Patch and Release – 2/23/2016', 'Updated versions of the recent SUPEE-7405 patch and Community Edition 1.9.2.3 release are now available. The updates add support for PHP 5.3 and address issues with upload file permissions, merging carts, and SOAP APIs experienced with the original release. They DO NOT address any new security issues, but all merchants should upgrade to the new versions to maintain compatibility with future releases. You can learn more about the updates at https://magento.com/security/patches/supee-7405', 'https://magento.com/security/patches/supee-7405', 1, 0),
 (99, 1, '2016-03-31 00:25:07', 'Protect Your Business from Brute-Force Password Guessing Attacks', 'We just posted an article on the Magento Security Center that shares best practices for protecting stores from brute-force password guessing attacks. We’ve recently been made aware of a rise in these attacks, so we strongly recommend that you review the approaches outlined in this article with your developer and hosting provider immediately and implement the ones that are best suited to your unique situation. Learn more at https://magento.com/security/best-practices/protect-your-magento-installation-password-guessing ', 'https://magento.com/security/best-practices/protect-your-magento-installation-password-guessing ', 1, 0),
 (100, 4, '2016-06-23 16:44:34', 'Increase your sales and productivity, while simplifying PCI compliance with exciting new Magento Community Edition 2.1 features.', 'Shoppers can now check out faster using credit cards stored with PayPal and a redesigned PayPal checkout. PCI compliance is easier thanks to Braintree Hosted Fields. Admin tools are redesigned to help you work more efficiently. Upgrade to Enterprise Edition for new Content Staging and Preview and Enhanced Site Search capabilities.', 'https://magento.com/blog/magento-news/magento-enterprise-edition-21-unleashes-power-marketers-and-merchandisers ', 1, 0),
-(101, 4, '2016-07-15 16:37:35', 'Magento needs your input. Please take our 2-question survey. Ends on Friday, July 22nd.', 'We want to hear from you. As a valued Community Edition user, we are interested in learning about your future upgrade plans for your Magento store. The survey is only two questions and should be very quick to complete. We will keep your response completely confidential. Our goal is to understand if and when you plan to upgrade your software, so we can ensure we have the right tools and support to ensure your success. You can access our survey through the following link: https://www.research.net/r/R9R2MJV', 'https://www.research.net/r/R9R2MJV', 1, 0);
+(101, 4, '2016-07-15 16:37:35', 'Magento needs your input. Please take our 2-question survey. Ends on Friday, July 22nd.', 'We want to hear from you. As a valued Community Edition user, we are interested in learning about your future upgrade plans for your Magento store. The survey is only two questions and should be very quick to complete. We will keep your response completely confidential. Our goal is to understand if and when you plan to upgrade your software, so we can ensure we have the right tools and support to ensure your success. You can access our survey through the following link: https://www.research.net/r/R9R2MJV', 'https://www.research.net/r/R9R2MJV', 1, 0),
+(102, 4, '2016-09-12 22:54:08', 'Which Marketplaces/Social Media Platforms Matter Most? Take Our Brief Survey.', 'Here at Magento we are continuously looking to improve our product. \n\nWe want to know which marketplaces and social media platforms you use to advertise and sell products from your Magento store. This simple survey should take less than five minutes. Your feedback is essential and we will keep your response completely confidential.\n \nTake the survey:  https://www.research.net/r/5BZCC2Q\n', 'https://www.research.net/r/5BZCC2Q', 1, 0),
+(103, 4, '2016-09-21 21:52:16', 'We Need Your Input! Take a Survey on CMS, Tax and Other Feature Needs', 'The Magento team is looking for your feedback to inform our product roadmap. We’re interested in which features you use, how we can improve built-in CMS and tax features, and what new capabilities are most important to you. Your responses will be kept confidential. Please complete the survey by September 28, 2016. Get started at https://www.research.net/r/L6TB52P\n\n', 'https://www.research.net/r/L6TB52P', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -245,7 +247,7 @@ CREATE TABLE IF NOT EXISTS `admin_user` (
 --
 
 INSERT INTO `admin_user` (`user_id`, `firstname`, `lastname`, `email`, `username`, `password`, `created`, `modified`, `logdate`, `lognum`, `reload_acl_flag`, `is_active`, `extra`, `rp_token`, `rp_token_created_at`) VALUES
-(1, 'Saurabh', 'Patel', 'saurabh10.patel@gmail.com', 'admin', 'c9b453f7da777fdf5579cdabb643599d:BAexuunIALCi8bLnUc28DJkvqV8hu4GN', '2016-06-27 20:41:32', '2016-06-27 20:41:32', '2016-08-09 19:38:15', 55, 0, 1, 'a:1:{s:11:"configState";a:151:{s:23:"marketplace_marketplace";s:1:"1";s:46:"marketplace_admin_approval_seller_registration";s:1:"1";s:24:"marketplace_subscription";s:1:"1";s:20:"marketplace_shipping";s:1:"1";s:19:"marketplace_product";s:1:"1";s:25:"marketplace_seller_review";s:1:"0";s:30:"advancedproductfilters_catalog";s:1:"1";s:20:"bannerslider_general";s:1:"1";s:14:"design_package";s:1:"1";s:12:"design_theme";s:1:"1";s:11:"design_head";s:1:"1";s:13:"design_header";s:1:"1";s:13:"design_footer";s:1:"1";s:16:"design_watermark";s:1:"1";s:17:"design_pagination";s:1:"1";s:12:"design_email";s:1:"1";s:19:"sociallogin_general";s:1:"0";s:20:"sociallogin_facebook";s:1:"1";s:19:"sociallogin_twitter";s:1:"0";s:18:"sociallogin_google";s:1:"1";s:17:"sociallogin_yahoo";s:1:"0";s:16:"currency_options";s:1:"1";s:20:"currency_webservicex";s:1:"0";s:15:"currency_import";s:1:"0";s:17:"contacts_contacts";s:1:"1";s:14:"contacts_email";s:1:"1";s:16:"catalog_frontend";s:1:"1";s:15:"catalog_sitemap";s:1:"1";s:14:"catalog_review";s:1:"1";s:21:"catalog_product_image";s:1:"1";s:20:"catalog_productalert";s:1:"1";s:25:"catalog_productalert_cron";s:1:"1";s:19:"catalog_placeholder";s:1:"1";s:25:"catalog_recently_products";s:1:"1";s:13:"catalog_price";s:1:"1";s:26:"catalog_layered_navigation";s:1:"1";s:18:"catalog_navigation";s:1:"1";s:11:"catalog_seo";s:1:"1";s:14:"catalog_search";s:1:"1";s:20:"catalog_downloadable";s:1:"1";s:22:"catalog_custom_options";s:1:"1";s:17:"supermenu_general";s:1:"1";s:17:"supermenu_columns";s:1:"1";s:15:"supermenu_popup";s:1:"1";s:22:"configswatches_general";s:1:"1";s:40:"configswatches_product_detail_dimensions";s:1:"1";s:41:"configswatches_product_listing_dimensions";s:1:"1";s:37:"configswatches_layered_nav_dimensions";s:1:"1";s:15:"general_country";s:1:"1";s:14:"general_region";s:1:"1";s:14:"general_locale";s:1:"1";s:25:"general_store_information";s:1:"1";s:27:"superdeals_superdeals_group";s:1:"0";s:18:"superdeals_general";s:1:"0";s:16:"superdeals_timer";s:1:"0";s:28:"superdeals_topsellingsidebar";s:1:"0";s:28:"superdeals_mostviewedsidebar";s:1:"1";s:30:"superdeals_dealofthedaysidebar";s:1:"0";s:17:"superdeals_slider";s:1:"1";s:22:"superdeals_seosettings";s:1:"0";s:17:"quickview_general";s:1:"1";s:25:"trans_email_ident_general";s:1:"0";s:23:"trans_email_ident_sales";s:1:"0";s:25:"trans_email_ident_support";s:1:"0";s:25:"trans_email_ident_custom1";s:1:"0";s:25:"trans_email_ident_custom2";s:1:"0";s:23:"onestepcheckout_general";s:1:"1";s:30:"onestepcheckout_display_option";s:1:"1";s:27:"onestepcheckout_ajax_update";s:1:"1";s:21:"onestepcheckout_terms";s:1:"0";s:24:"onestepcheckout_feedback";s:1:"0";s:24:"cataloginventory_options";s:1:"1";s:29:"cataloginventory_item_options";s:1:"1";s:16:"sendfriend_email";s:1:"1";s:22:"customer_account_share";s:1:"1";s:25:"customer_online_customers";s:1:"1";s:23:"customer_create_account";s:1:"1";s:17:"customer_password";s:1:"1";s:16:"customer_address";s:1:"1";s:16:"customer_startup";s:1:"1";s:26:"customer_address_templates";s:1:"1";s:16:"customer_captcha";s:1:"1";s:18:"persistent_options";s:1:"1";s:13:"sales_general";s:1:"1";s:17:"sales_totals_sort";s:1:"0";s:13:"sales_reorder";s:1:"1";s:14:"sales_identity";s:1:"0";s:19:"sales_minimum_order";s:1:"1";s:15:"sales_dashboard";s:1:"1";s:18:"sales_gift_options";s:1:"1";s:10:"sales_msrp";s:1:"1";s:17:"sales_email_order";s:1:"1";s:25:"sales_email_order_comment";s:1:"1";s:19:"sales_email_invoice";s:1:"1";s:27:"sales_email_invoice_comment";s:1:"1";s:20:"sales_email_shipment";s:1:"1";s:28:"sales_email_shipment_comment";s:1:"1";s:22:"sales_email_creditmemo";s:1:"1";s:30:"sales_email_creditmemo_comment";s:1:"1";s:16:"checkout_options";s:1:"1";s:13:"checkout_cart";s:1:"1";s:18:"checkout_cart_link";s:1:"1";s:16:"checkout_sidebar";s:1:"1";s:23:"checkout_payment_failed";s:1:"1";s:15:"shipping_origin";s:1:"1";s:15:"shipping_option";s:1:"1";s:17:"carriers_flatrate";s:1:"1";s:18:"carriers_tablerate";s:1:"1";s:21:"carriers_freeshipping";s:1:"1";s:15:"carriers_apptha";s:1:"1";s:12:"carriers_ups";s:1:"1";s:13:"carriers_usps";s:1:"1";s:14:"carriers_fedex";s:1:"1";s:12:"carriers_dhl";s:1:"1";s:15:"carriers_dhlint";s:1:"1";s:15:"payment_account";s:1:"1";s:32:"payment_paypal_payment_solutions";s:1:"1";s:19:"payment_wps_express";s:1:"0";s:37:"payment_wps_express_checkout_required";s:1:"1";s:54:"payment_wps_express_checkout_required_express_checkout";s:1:"1";s:28:"payment_settings_wps_express";s:1:"1";s:37:"payment_settings_wps_express_advanced";s:1:"0";s:37:"payment_wps_express_billing_agreement";s:1:"0";s:37:"payment_wps_express_settlement_report";s:1:"0";s:28:"payment_wps_express_frontend";s:1:"0";s:24:"payment_express_checkout";s:1:"0";s:33:"payment_express_checkout_required";s:1:"1";s:50:"payment_express_checkout_required_express_checkout";s:1:"1";s:19:"payment_settings_ec";s:1:"1";s:28:"payment_settings_ec_advanced";s:1:"0";s:42:"payment_express_checkout_billing_agreement";s:1:"0";s:42:"payment_express_checkout_settlement_report";s:1:"0";s:33:"payment_express_checkout_frontend";s:1:"0";s:14:"payment_ccsave";s:1:"1";s:15:"payment_checkmo";s:1:"1";s:12:"payment_free";s:1:"1";s:20:"payment_banktransfer";s:1:"1";s:22:"payment_cashondelivery";s:1:"1";s:21:"payment_purchaseorder";s:1:"1";s:31:"payment_authorizenet_directpost";s:1:"1";s:20:"payment_authorizenet";s:1:"1";s:11:"system_csrf";s:1:"0";s:11:"system_cron";s:1:"0";s:11:"system_smtp";s:1:"1";s:15:"system_currency";s:1:"1";s:10:"system_log";s:1:"1";s:24:"system_adminnotification";s:1:"1";s:26:"system_external_page_cache";s:1:"1";s:17:"system_export_csv";s:1:"1";s:13:"system_backup";s:1:"1";s:34:"system_media_storage_configuration";s:1:"1";}}', NULL, NULL);
+(1, 'Saurabh', 'Patel', 'saurabh10.patel@gmail.com', 'admin', 'c9b453f7da777fdf5579cdabb643599d:BAexuunIALCi8bLnUc28DJkvqV8hu4GN', '2016-06-27 20:41:32', '2016-06-27 20:41:32', '2016-10-03 18:18:48', 167, 0, 1, 'a:1:{s:11:"configState";a:179:{s:23:"marketplace_marketplace";s:1:"1";s:46:"marketplace_admin_approval_seller_registration";s:1:"1";s:24:"marketplace_subscription";s:1:"1";s:20:"marketplace_shipping";s:1:"1";s:19:"marketplace_product";s:1:"1";s:25:"marketplace_seller_review";s:1:"0";s:30:"advancedproductfilters_catalog";s:1:"1";s:20:"bannerslider_general";s:1:"1";s:14:"design_package";s:1:"1";s:12:"design_theme";s:1:"1";s:11:"design_head";s:1:"1";s:13:"design_header";s:1:"1";s:13:"design_footer";s:1:"1";s:16:"design_watermark";s:1:"1";s:17:"design_pagination";s:1:"1";s:12:"design_email";s:1:"1";s:19:"sociallogin_general";s:1:"0";s:20:"sociallogin_facebook";s:1:"1";s:19:"sociallogin_twitter";s:1:"1";s:18:"sociallogin_google";s:1:"1";s:17:"sociallogin_yahoo";s:1:"1";s:16:"currency_options";s:1:"1";s:20:"currency_webservicex";s:1:"0";s:15:"currency_import";s:1:"0";s:17:"contacts_contacts";s:1:"1";s:14:"contacts_email";s:1:"1";s:16:"catalog_frontend";s:1:"1";s:15:"catalog_sitemap";s:1:"1";s:14:"catalog_review";s:1:"1";s:21:"catalog_product_image";s:1:"1";s:20:"catalog_productalert";s:1:"1";s:25:"catalog_productalert_cron";s:1:"1";s:19:"catalog_placeholder";s:1:"1";s:25:"catalog_recently_products";s:1:"1";s:13:"catalog_price";s:1:"1";s:26:"catalog_layered_navigation";s:1:"1";s:18:"catalog_navigation";s:1:"1";s:11:"catalog_seo";s:1:"1";s:14:"catalog_search";s:1:"1";s:20:"catalog_downloadable";s:1:"1";s:22:"catalog_custom_options";s:1:"1";s:17:"supermenu_general";s:1:"1";s:17:"supermenu_columns";s:1:"1";s:15:"supermenu_popup";s:1:"1";s:22:"configswatches_general";s:1:"1";s:40:"configswatches_product_detail_dimensions";s:1:"1";s:41:"configswatches_product_listing_dimensions";s:1:"1";s:37:"configswatches_layered_nav_dimensions";s:1:"1";s:15:"general_country";s:1:"1";s:14:"general_region";s:1:"1";s:14:"general_locale";s:1:"1";s:25:"general_store_information";s:1:"1";s:27:"superdeals_superdeals_group";s:1:"1";s:18:"superdeals_general";s:1:"1";s:16:"superdeals_timer";s:1:"1";s:28:"superdeals_topsellingsidebar";s:1:"1";s:28:"superdeals_mostviewedsidebar";s:1:"1";s:30:"superdeals_dealofthedaysidebar";s:1:"1";s:17:"superdeals_slider";s:1:"1";s:22:"superdeals_seosettings";s:1:"1";s:17:"quickview_general";s:1:"1";s:25:"trans_email_ident_general";s:1:"1";s:23:"trans_email_ident_sales";s:1:"1";s:25:"trans_email_ident_support";s:1:"1";s:25:"trans_email_ident_custom1";s:1:"1";s:25:"trans_email_ident_custom2";s:1:"1";s:23:"onestepcheckout_general";s:1:"1";s:30:"onestepcheckout_display_option";s:1:"1";s:27:"onestepcheckout_ajax_update";s:1:"1";s:21:"onestepcheckout_terms";s:1:"1";s:24:"onestepcheckout_feedback";s:1:"1";s:24:"cataloginventory_options";s:1:"1";s:29:"cataloginventory_item_options";s:1:"1";s:16:"sendfriend_email";s:1:"1";s:22:"customer_account_share";s:1:"1";s:25:"customer_online_customers";s:1:"1";s:23:"customer_create_account";s:1:"1";s:17:"customer_password";s:1:"1";s:16:"customer_address";s:1:"1";s:16:"customer_startup";s:1:"1";s:26:"customer_address_templates";s:1:"1";s:16:"customer_captcha";s:1:"1";s:18:"persistent_options";s:1:"1";s:13:"sales_general";s:1:"1";s:17:"sales_totals_sort";s:1:"0";s:13:"sales_reorder";s:1:"1";s:14:"sales_identity";s:1:"1";s:19:"sales_minimum_order";s:1:"1";s:15:"sales_dashboard";s:1:"1";s:18:"sales_gift_options";s:1:"1";s:10:"sales_msrp";s:1:"1";s:17:"sales_email_order";s:1:"1";s:25:"sales_email_order_comment";s:1:"1";s:19:"sales_email_invoice";s:1:"1";s:27:"sales_email_invoice_comment";s:1:"1";s:20:"sales_email_shipment";s:1:"1";s:28:"sales_email_shipment_comment";s:1:"1";s:22:"sales_email_creditmemo";s:1:"1";s:30:"sales_email_creditmemo_comment";s:1:"1";s:16:"checkout_options";s:1:"1";s:13:"checkout_cart";s:1:"1";s:18:"checkout_cart_link";s:1:"1";s:16:"checkout_sidebar";s:1:"1";s:23:"checkout_payment_failed";s:1:"1";s:15:"shipping_origin";s:1:"1";s:15:"shipping_option";s:1:"1";s:17:"carriers_flatrate";s:1:"1";s:18:"carriers_tablerate";s:1:"1";s:21:"carriers_freeshipping";s:1:"1";s:15:"carriers_apptha";s:1:"1";s:12:"carriers_ups";s:1:"1";s:13:"carriers_usps";s:1:"1";s:14:"carriers_fedex";s:1:"1";s:12:"carriers_dhl";s:1:"1";s:15:"carriers_dhlint";s:1:"1";s:15:"payment_account";s:1:"1";s:32:"payment_paypal_payment_solutions";s:1:"1";s:19:"payment_wps_express";s:1:"0";s:37:"payment_wps_express_checkout_required";s:1:"1";s:54:"payment_wps_express_checkout_required_express_checkout";s:1:"1";s:28:"payment_settings_wps_express";s:1:"1";s:37:"payment_settings_wps_express_advanced";s:1:"0";s:37:"payment_wps_express_billing_agreement";s:1:"0";s:37:"payment_wps_express_settlement_report";s:1:"0";s:28:"payment_wps_express_frontend";s:1:"0";s:24:"payment_express_checkout";s:1:"0";s:33:"payment_express_checkout_required";s:1:"1";s:50:"payment_express_checkout_required_express_checkout";s:1:"1";s:19:"payment_settings_ec";s:1:"1";s:28:"payment_settings_ec_advanced";s:1:"0";s:42:"payment_express_checkout_billing_agreement";s:1:"0";s:42:"payment_express_checkout_settlement_report";s:1:"0";s:33:"payment_express_checkout_frontend";s:1:"0";s:14:"payment_ccsave";s:1:"1";s:15:"payment_checkmo";s:1:"1";s:12:"payment_free";s:1:"1";s:20:"payment_banktransfer";s:1:"1";s:22:"payment_cashondelivery";s:1:"1";s:21:"payment_purchaseorder";s:1:"1";s:31:"payment_authorizenet_directpost";s:1:"1";s:20:"payment_authorizenet";s:1:"1";s:11:"system_csrf";s:1:"0";s:11:"system_cron";s:1:"0";s:11:"system_smtp";s:1:"1";s:15:"system_currency";s:1:"1";s:10:"system_log";s:1:"1";s:24:"system_adminnotification";s:1:"1";s:26:"system_external_page_cache";s:1:"1";s:17:"system_export_csv";s:1:"1";s:13:"system_backup";s:1:"1";s:34:"system_media_storage_configuration";s:1:"1";s:7:"web_url";s:1:"1";s:7:"web_seo";s:1:"1";s:12:"web_unsecure";s:1:"0";s:10:"web_secure";s:1:"0";s:11:"web_default";s:1:"0";s:9:"web_polls";s:1:"0";s:10:"web_cookie";s:1:"0";s:11:"web_session";s:1:"0";s:24:"web_browser_capabilities";s:1:"0";s:16:"sitemap_category";s:1:"1";s:15:"sitemap_product";s:1:"1";s:12:"sitemap_page";s:1:"1";s:16:"sitemap_generate";s:1:"1";s:12:"admin_emails";s:1:"0";s:13:"admin_startup";s:1:"0";s:9:"admin_url";s:1:"1";s:14:"admin_security";s:1:"0";s:15:"admin_dashboard";s:1:"1";s:13:"admin_captcha";s:1:"1";s:20:"easypathhints_option";s:1:"1";s:12:"dev_restrict";s:1:"1";s:9:"dev_debug";s:1:"1";s:12:"dev_template";s:1:"0";s:20:"dev_translate_inline";s:1:"0";s:7:"dev_log";s:1:"0";s:6:"dev_js";s:1:"0";s:7:"dev_css";s:1:"0";s:31:"advanced_modules_disable_output";s:1:"1";}}', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -418,15 +420,17 @@ CREATE TABLE IF NOT EXISTS `appthabannerslider` (
   `created_time` datetime DEFAULT NULL,
   `update_time` datetime DEFAULT NULL,
   PRIMARY KEY (`banner_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=19 ;
 
 --
 -- Dumping data for table `appthabannerslider`
 --
 
 INSERT INTO `appthabannerslider` (`banner_id`, `title`, `file`, `status`, `link`, `sort`, `created_time`, `update_time`) VALUES
-(8, 'Lithics', 'sliderimages/s/c/screenshot_8_1.png', 1, NULL, 0, '2016-07-28 00:48:06', '2016-07-28 00:48:06'),
-(9, 'LITHICS.IN', 'sliderimages/2/_/2.png', 1, 'https://www.facebook.com/lithics', 0, '2016-07-28 00:48:49', '2016-07-28 00:48:49');
+(11, 'b', 'sliderimages/l/e/lefkara_lace_1.jpg', 1, NULL, 0, '2016-09-08 22:22:43', '2016-09-08 22:22:43'),
+(16, 'fhyj', 'sliderimages/o/c/ocoxal-339106_960_720_2.jpg', 1, NULL, 0, '2016-09-08 22:22:55', '2016-09-08 22:22:55'),
+(17, 'uio', 'sliderimages/i/m/img_2853_1.jpg', 1, NULL, 0, '2016-09-08 22:23:06', '2016-09-08 22:23:06'),
+(18, 'uoi', 'sliderimages/i/m/img_2829.jpg', 1, NULL, 0, '2016-09-08 22:23:14', '2016-09-08 22:23:14');
 
 -- --------------------------------------------------------
 
@@ -441,6 +445,16 @@ CREATE TABLE IF NOT EXISTS `captcha_log` (
   `updated_at` timestamp NULL DEFAULT NULL COMMENT 'Update Time',
   PRIMARY KEY (`type`,`value`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Count Login Attempts';
+
+--
+-- Dumping data for table `captcha_log`
+--
+
+INSERT INTO `captcha_log` (`type`, `value`, `count`, `updated_at`) VALUES
+('1', '178.162.199.93', 508, '2016-08-16 12:38:24'),
+('1', '178.162.201.97', 638, '2016-08-21 16:31:36'),
+('1', '46.165.210.13', 26, '2016-08-16 19:11:49'),
+('2', 'adminadmin@123', 1, '2016-08-11 13:30:09');
 
 -- --------------------------------------------------------
 
@@ -497,21 +511,14 @@ CREATE TABLE IF NOT EXISTS `cataloginventory_stock_item` (
   UNIQUE KEY `UNQ_CATALOGINVENTORY_STOCK_ITEM_PRODUCT_ID_STOCK_ID` (`product_id`,`stock_id`),
   KEY `IDX_CATALOGINVENTORY_STOCK_ITEM_PRODUCT_ID` (`product_id`),
   KEY `IDX_CATALOGINVENTORY_STOCK_ITEM_STOCK_ID` (`stock_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Cataloginventory Stock Item' AUTO_INCREMENT=14 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Cataloginventory Stock Item' AUTO_INCREMENT=17 ;
 
 --
 -- Dumping data for table `cataloginventory_stock_item`
 --
 
 INSERT INTO `cataloginventory_stock_item` (`item_id`, `product_id`, `stock_id`, `qty`, `min_qty`, `use_config_min_qty`, `is_qty_decimal`, `backorders`, `use_config_backorders`, `min_sale_qty`, `use_config_min_sale_qty`, `max_sale_qty`, `use_config_max_sale_qty`, `is_in_stock`, `low_stock_date`, `notify_stock_qty`, `use_config_notify_stock_qty`, `manage_stock`, `use_config_manage_stock`, `stock_status_changed_auto`, `use_config_qty_increments`, `qty_increments`, `use_config_enable_qty_inc`, `enable_qty_increments`, `is_decimal_divided`) VALUES
-(3, 3, 1, '51.0000', '0.0000', 1, 0, 0, 1, '1.0000', 1, '0.0000', 1, 1, NULL, NULL, 1, 0, 1, 0, 1, '0.0000', 1, 0, 0),
-(4, 4, 1, '35.0000', '0.0000', 1, 0, 0, 1, '1.0000', 1, '0.0000', 1, 1, NULL, NULL, 1, 0, 1, 0, 1, '0.0000', 1, 0, 0),
-(5, 5, 1, '96.0000', '0.0000', 1, 0, 0, 1, '1.0000', 1, '0.0000', 1, 1, NULL, NULL, 1, 0, 1, 0, 1, '0.0000', 1, 0, 0),
-(6, 6, 1, '12.0000', '0.0000', 1, 0, 0, 1, '1.0000', 1, '0.0000', 1, 1, NULL, NULL, 1, 0, 1, 0, 1, '0.0000', 1, 0, 0),
-(8, 8, 1, '45.0000', '0.0000', 1, 0, 0, 1, '1.0000', 1, '0.0000', 1, 1, NULL, NULL, 1, 0, 1, 0, 1, '0.0000', 1, 0, 0),
-(10, 10, 1, '7.0000', '0.0000', 1, 0, 0, 1, '1.0000', 1, '0.0000', 1, 1, NULL, NULL, 1, 0, 1, 0, 1, '0.0000', 1, 0, 0),
-(11, 11, 1, '0.0000', '0.0000', 1, 0, 0, 1, '1.0000', 1, '0.0000', 1, 0, '2016-08-07 21:03:46', NULL, 1, 0, 1, 1, 1, '0.0000', 1, 0, 0),
-(12, 12, 1, '45.0000', '0.0000', 1, 0, 2, 0, '5.0000', 0, '0.0000', 1, 1, NULL, NULL, 1, 1, 0, 0, 1, '0.0000', 0, 0, 0);
+(15, 15, 1, '10.0000', '0.0000', 1, 0, 0, 1, '1.0000', 1, '0.0000', 1, 1, NULL, NULL, 1, 0, 1, 0, 1, '0.0000', 1, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -535,14 +542,7 @@ CREATE TABLE IF NOT EXISTS `cataloginventory_stock_status` (
 --
 
 INSERT INTO `cataloginventory_stock_status` (`product_id`, `website_id`, `stock_id`, `qty`, `stock_status`) VALUES
-(3, 1, 1, '51.0000', 1),
-(4, 1, 1, '35.0000', 1),
-(5, 1, 1, '96.0000', 1),
-(6, 1, 1, '12.0000', 1),
-(8, 1, 1, '45.0000', 1),
-(10, 1, 1, '7.0000', 1),
-(11, 1, 1, '0.0000', 0),
-(12, 1, 1, '45.0000', 1);
+(15, 1, 1, '10.0000', 1);
 
 -- --------------------------------------------------------
 
@@ -736,20 +736,14 @@ CREATE TABLE IF NOT EXISTS `catalogsearch_fulltext` (
   PRIMARY KEY (`fulltext_id`),
   UNIQUE KEY `UNQ_CATALOGSEARCH_FULLTEXT_PRODUCT_ID_STORE_ID` (`product_id`,`store_id`),
   FULLTEXT KEY `FTI_CATALOGSEARCH_FULLTEXT_DATA_INDEX` (`data_index`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='Catalog search result table' AUTO_INCREMENT=85 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='Catalog search result table' AUTO_INCREMENT=125 ;
 
 --
 -- Dumping data for table `catalogsearch_fulltext`
 --
 
 INSERT INTO `catalogsearch_fulltext` (`fulltext_id`, `product_id`, `store_id`, `data_index`) VALUES
-(79, 4, 1, '13012|None|Ladies Bag|Ladies Handmade Bag with great finish.|Ladies Handmade Bag with great finish.|300|1'),
-(80, 5, 1, '60012|None|scarf|Handmade scarf , perfect to wear to feel cozy and look smart.|Handmade scarf , perfect to wear to feel cozy and look smart.|100|1'),
-(81, 6, 1, '55012|None|Water Dispenser|A perfect and innovative tool to water plants.|A perfect and innovative tool to water plants.|400|1'),
-(82, 8, 1, '13013|None|Ladies purse|Handmade , beautiful small ladies purse|Handmade , beautiful small ladies purse|200|1'),
-(83, 10, 1, '11014|None|Ladies purse synthetic|Beautiful purse made from synthetic thread.|Beautiful purse made from synthetic thread.|150|1'),
-(84, 12, 1, '132455|None|Bag|This is just a trial|This is just a trial|150|1'),
-(78, 3, 1, '12412|None|Special hand made Notebook|A perfect notebook to share your experiences and feelings with yourself, with your own personal notebook.|A perfect notebook to share your experiences and feelings with yourself, with your own personal notebook.|150|1');
+(124, 15, 1, 'DFDW_Handmade_Leather_wallet_full|Taxable Goods|Handmade Wallet|Handmade wallet for men , it is a handcrafted product with a great quality and finishing, which will make you feel special while carrying this product.|This product is exclusively made by Deaf Women in Delhi.|550|1');
 
 -- --------------------------------------------------------
 
@@ -773,25 +767,36 @@ CREATE TABLE IF NOT EXISTS `catalogsearch_query` (
   KEY `IDX_CATALOGSEARCH_QUERY_QUERY_TEXT_STORE_ID_POPULARITY` (`query_text`,`store_id`,`popularity`),
   KEY `IDX_CATALOGSEARCH_QUERY_STORE_ID` (`store_id`),
   KEY `IDX_CATALOGSEARCH_QUERY_SYNONYM_FOR` (`synonym_for`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Catalog search query table' AUTO_INCREMENT=13 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Catalog search query table' AUTO_INCREMENT=24 ;
 
 --
 -- Dumping data for table `catalogsearch_query`
 --
 
 INSERT INTO `catalogsearch_query` (`query_id`, `query_text`, `num_results`, `popularity`, `redirect`, `synonym_for`, `store_id`, `display_in_terms`, `is_active`, `is_processed`, `updated_at`) VALUES
-(1, 'samsung', 0, 5, NULL, NULL, 1, 1, 1, 0, '2016-07-22 18:34:46'),
-(2, 'h', 4, 974, NULL, NULL, 1, 1, 1, 1, '2016-08-08 13:39:45'),
+(1, 'samsung', 0, 6, NULL, NULL, 1, 1, 1, 0, '2016-08-30 11:39:00'),
+(2, 'h', 1, 2240, NULL, NULL, 1, 1, 1, 1, '2016-10-03 23:01:34'),
 (3, 'gifts', 0, 1, NULL, NULL, 1, 1, 1, 0, '2016-07-10 20:04:59'),
-(4, 'ladies purse', 3, 364, NULL, NULL, 1, 1, 1, 1, '2016-08-08 13:40:04'),
-(5, 'ladies', 3, 363, NULL, NULL, 1, 1, 1, 1, '2016-08-08 15:02:17'),
-(6, 'scarf', 1, 165, NULL, NULL, 1, 1, 1, 1, '2016-08-08 13:39:31'),
+(4, 'ladies purse', 0, 944, NULL, NULL, 1, 1, 1, 1, '2016-10-03 11:42:38'),
+(5, 'ladies', 0, 927, NULL, NULL, 1, 1, 1, 1, '2016-10-03 15:40:07'),
+(6, 'scarf', 0, 352, NULL, NULL, 1, 1, 1, 0, '2016-09-21 17:21:08'),
 (7, 'purse', 0, 1, NULL, NULL, 1, 1, 1, 0, '2016-07-10 21:12:23'),
 (8, 'Phone', 0, 1, NULL, NULL, 1, 1, 1, 0, '2016-07-22 18:34:59'),
 (9, 'dfg', 0, 1, NULL, NULL, 1, 1, 1, 0, '2016-07-23 21:25:59'),
-(10, 'shoes', 0, 1, NULL, NULL, 1, 1, 1, 0, '2016-07-23 21:26:52'),
+(10, 'shoes', 0, 2, NULL, NULL, 1, 1, 1, 0, '2016-09-20 17:48:57'),
 (11, 'shirt', 0, 1, NULL, NULL, 1, 1, 1, 0, '2016-07-23 21:27:03'),
-(12, 'bags', 0, 1, NULL, NULL, 1, 1, 1, 0, '2016-08-01 17:37:06');
+(12, 'bags', 0, 1, NULL, NULL, 1, 1, 1, 0, '2016-08-01 17:37:06'),
+(13, 'site:google.com', 0, 1, NULL, NULL, 1, 1, 1, 0, '2016-08-15 10:42:56'),
+(14, 'blog', 0, 1, NULL, NULL, 1, 1, 1, 0, '2016-08-22 20:11:48'),
+(15, 'Story', 0, 1, NULL, NULL, 1, 1, 1, 0, '2016-08-26 04:52:09'),
+(16, 'bag', 0, 72, NULL, NULL, 1, 1, 1, 1, '2016-10-02 23:45:20'),
+(17, 'sdf', 0, 1, NULL, NULL, 1, 1, 1, 0, '2016-08-31 18:33:56'),
+(18, 'craft', 0, 1, NULL, NULL, 1, 1, 1, 0, '2016-09-08 20:36:26'),
+(19, 'notes', 0, 1, NULL, NULL, 1, 1, 1, 0, '2016-09-08 20:36:32'),
+(20, 'note', 0, 21, NULL, NULL, 1, 1, 1, 1, '2016-10-01 21:02:18'),
+(21, 'hand', 0, 1, NULL, NULL, 1, 1, 1, 0, '2016-09-18 20:45:34'),
+(22, 'wallet', 1, 40, NULL, NULL, 1, 1, 1, 1, '2016-10-03 10:51:14'),
+(23, 'accessories', 0, 1, NULL, NULL, 1, 1, 1, 0, '2016-09-23 14:19:29');
 
 -- --------------------------------------------------------
 
@@ -813,19 +818,8 @@ CREATE TABLE IF NOT EXISTS `catalogsearch_result` (
 --
 
 INSERT INTO `catalogsearch_result` (`query_id`, `product_id`, `relevance`) VALUES
-(2, 3, '0.0000'),
-(2, 4, '0.0000'),
-(2, 5, '0.0000'),
-(2, 8, '0.0000'),
-(2, 10, '0.0000'),
-(2, 12, '0.0000'),
-(4, 4, '0.0000'),
-(4, 8, '0.0000'),
-(4, 10, '0.0000'),
-(5, 4, '0.0000'),
-(5, 8, '0.0000'),
-(5, 10, '0.0000'),
-(6, 5, '0.0000');
+(2, 15, '0.0000'),
+(22, 15, '0.0000');
 
 -- --------------------------------------------------------
 
@@ -899,7 +893,7 @@ CREATE TABLE IF NOT EXISTS `catalog_category_entity` (
   PRIMARY KEY (`entity_id`),
   KEY `IDX_CATALOG_CATEGORY_ENTITY_LEVEL` (`level`),
   KEY `IDX_CATALOG_CATEGORY_ENTITY_PATH_ENTITY_ID` (`path`,`entity_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Catalog Category Table' AUTO_INCREMENT=63 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Catalog Category Table' AUTO_INCREMENT=60 ;
 
 --
 -- Dumping data for table `catalog_category_entity`
@@ -908,17 +902,17 @@ CREATE TABLE IF NOT EXISTS `catalog_category_entity` (
 INSERT INTO `catalog_category_entity` (`entity_id`, `entity_type_id`, `attribute_set_id`, `parent_id`, `created_at`, `updated_at`, `path`, `position`, `level`, `children_count`) VALUES
 (1, 3, 0, 0, '2016-06-27 20:38:58', '2016-06-27 20:38:58', '1', 0, 0, 46),
 (2, 3, 3, 1, '2016-06-27 20:38:58', '2016-06-27 20:38:58', '1/2', 1, 1, 45),
-(3, 3, 3, 2, '2016-06-28 06:46:08', '2016-07-10 22:27:26', '1/2/3', 1, 2, 9),
-(4, 3, 3, 2, '2016-06-28 06:46:23', '2016-07-10 22:27:17', '1/2/4', 2, 2, 4),
-(5, 3, 3, 2, '2016-06-28 06:46:48', '2016-07-10 22:27:36', '1/2/5', 3, 2, 5),
-(6, 3, 3, 2, '2016-06-28 06:47:00', '2016-07-10 22:30:16', '1/2/6', 4, 2, 5),
-(7, 3, 3, 2, '2016-06-28 06:47:22', '2016-07-10 22:32:02', '1/2/7', 5, 2, 6),
+(3, 3, 3, 2, '2016-06-28 12:46:08', '2016-10-02 12:15:00', '1/2/3', 1, 2, 9),
+(4, 3, 3, 2, '2016-06-28 07:16:23', '2016-09-28 16:35:54', '1/2/4', 2, 2, 4),
+(5, 3, 3, 2, '2016-06-28 07:16:48', '2016-09-28 16:36:07', '1/2/5', 3, 2, 5),
+(6, 3, 3, 2, '2016-06-28 07:17:00', '2016-09-28 16:36:17', '1/2/6', 4, 2, 5),
+(7, 3, 3, 2, '2016-06-28 10:17:22', '2016-09-28 16:34:49', '1/2/7', 5, 2, 6),
 (9, 3, 3, 5, '2016-06-28 07:04:00', '2016-07-10 19:32:39', '1/2/5/9', 2, 3, 0),
 (10, 3, 3, 5, '2016-06-28 07:05:16', '2016-07-10 19:33:05', '1/2/5/10', 3, 3, 0),
 (11, 3, 3, 6, '2016-06-28 07:06:40', '2016-07-10 19:37:22', '1/2/6/11', 1, 3, 0),
 (12, 3, 3, 6, '2016-06-28 07:06:50', '2016-07-10 19:38:10', '1/2/6/12', 2, 3, 0),
 (14, 3, 3, 2, '2016-07-10 19:31:38', '2016-07-10 19:39:34', '1/2/14', 6, 2, 4),
-(15, 3, 3, 2, '2016-07-10 19:31:59', '2016-07-10 22:42:57', '1/2/15', 7, 2, 5),
+(15, 3, 3, 2, '2016-07-10 20:31:59', '2016-09-28 16:49:12', '1/2/15', 7, 2, 5),
 (17, 3, 3, 5, '2016-07-10 19:33:35', '2016-07-10 19:42:22', '1/2/5/17', 4, 3, 0),
 (18, 3, 3, 5, '2016-07-10 19:33:57', '2016-07-10 19:42:25', '1/2/5/18', 5, 3, 0),
 (19, 3, 3, 3, '2016-07-10 19:34:23', '2016-07-10 19:41:29', '1/2/3/19', 1, 3, 0),
@@ -972,7 +966,7 @@ CREATE TABLE IF NOT EXISTS `catalog_category_entity_datetime` (
   KEY `IDX_CATALOG_CATEGORY_ENTITY_DATETIME_ENTITY_ID` (`entity_id`),
   KEY `IDX_CATALOG_CATEGORY_ENTITY_DATETIME_ATTRIBUTE_ID` (`attribute_id`),
   KEY `IDX_CATALOG_CATEGORY_ENTITY_DATETIME_STORE_ID` (`store_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Catalog Category Datetime Attribute Backend Table' AUTO_INCREMENT=229 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Catalog Category Datetime Attribute Backend Table' AUTO_INCREMENT=271 ;
 
 --
 -- Dumping data for table `catalog_category_entity_datetime`
@@ -1007,3 +1001,9 @@ INSERT INTO `catalog_category_entity_datetime` (`value_id`, `entity_type_id`, `a
 (58, 3, 60, 0, 18, NULL),
 (59, 3, 59, 0, 19, NULL),
 (60, 3, 60, 0, 19, NULL),
+(61, 3, 59, 0, 20, NULL),
+(62, 3, 60, 0, 20, NULL),
+(63, 3, 59, 0, 21, NULL),
+(64, 3, 60, 0, 21, NULL),
+(67, 3, 59, 0, 22, NULL),
+(68, 3, 60, 0, 22, NULL),
