@@ -1,181 +1,6 @@
 -- --------------------------------------------------------
 
 --
--- Table structure for table `marketplace_commission`
---
-
-CREATE TABLE IF NOT EXISTS `marketplace_commission` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `seller_id` int(11) NOT NULL,
-  `product_id` int(11) NOT NULL,
-  `product_qty` decimal(12,0) NOT NULL,
-  `product_amt` int(11) NOT NULL,
-  `order_id` int(11) NOT NULL,
-  `increment_id` int(11) NOT NULL,
-  `commission_fee` decimal(12,4) NOT NULL,
-  `seller_amount` decimal(12,4) NOT NULL,
-  `seller_shipping_amount` decimal(12,4) NOT NULL,
-  `order_total` decimal(12,4) NOT NULL,
-  `order_status` varchar(30) NOT NULL,
-  `customer_id` int(11) NOT NULL,
-  `status` tinyint(4) NOT NULL,
-  `credited` tinyint(4) NOT NULL,
-  `created_at` datetime NOT NULL,
-  `refund_request_customer` smallint(6) NOT NULL DEFAULT '0',
-  `cancel_request_customer` smallint(6) NOT NULL DEFAULT '0',
-  `refund_request_seller` smallint(6) NOT NULL DEFAULT '0',
-  `item_order_status` varchar(30) NOT NULL DEFAULT 'pending',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=18 ;
-
---
--- Dumping data for table `marketplace_commission`
---
-
-INSERT INTO `marketplace_commission` (`id`, `seller_id`, `product_id`, `product_qty`, `product_amt`, `order_id`, `increment_id`, `commission_fee`, `seller_amount`, `seller_shipping_amount`, `order_total`, `order_status`, `customer_id`, `status`, `credited`, `created_at`, `refund_request_customer`, `cancel_request_customer`, `refund_request_seller`, `item_order_status`) VALUES
-(1, 2, 5, '1', 450, 1, 100000001, '22.5000', '427.5000', '0.0000', '450.0000', 'pending', 0, 1, 0, '2016-06-28 10:32:18', 0, 0, 0, 'canceled'),
-(2, 1, 3, '1', 300, 2, 100000002, '15.0000', '300.0000', '15.0000', '315.0000', 'pending', 0, 1, 0, '2016-06-28 10:46:07', 0, 0, 0, 'canceled'),
-(3, 1, 1, '1', 15900, 3, 100000003, '795.0000', '15155.0000', '50.0000', '15950.0000', 'pending', 0, 1, 0, '2016-06-28 10:47:03', 0, 0, 0, 'canceled'),
-(4, 1, 2, '1', 500, 4, 100000004, '25.0000', '521.0000', '46.0000', '546.0000', 'pending', 0, 1, 0, '2016-06-28 11:00:00', 0, 0, 0, 'canceled'),
-(5, 1, 3, '1', 150, 5, 100000005, '7.5000', '157.5000', '15.0000', '165.0000', 'pending', 6, 1, 0, '2016-07-24 01:29:28', 0, 1, 0, 'canceled'),
-(6, 2, 5, '3', 100, 8, 100000008, '15.0000', '285.0000', '0.0000', '300.0000', 'pending', 3, 1, 0, '2016-08-01 14:01:01', 0, 0, 0, 'canceled'),
-(7, 1, 3, '2', 150, 9, 100000009, '15.0000', '315.0000', '30.0000', '1060.0000', 'pending', 5, 1, 0, '2016-08-01 18:27:26', 0, 0, 0, 'canceled'),
-(8, 1, 3, '1', 150, 10, 100000010, '7.5000', '157.5000', '15.0000', '165.0000', 'canceled', 3, 1, 0, '2016-08-02 12:07:44', 0, 0, 0, 'canceled'),
-(9, 2, 5, '2', 100, 12, 100000012, '0.0000', '200.0000', '0.0000', '530.0000', 'pending', 5, 1, 0, '2016-08-16 06:18:12', 0, 0, 0, 'canceled'),
-(10, 2, 5, '2', 100, 13, 100000013, '0.0000', '200.0000', '0.0000', '210.0000', 'canceled', 3, 1, 0, '2016-08-17 10:43:38', 0, 0, 0, 'canceled'),
-(11, 2, 5, '2', 100, 14, 100000014, '0.0000', '200.0000', '0.0000', '480.0000', 'complete', 3, 1, 0, '2016-08-25 13:58:14', 0, 0, 0, 'completed'),
-(12, 1, 3, '2', 150, 15, 100000015, '0.0000', '300.0000', '0.0000', '1080.0000', 'pending', 0, 1, 0, '2016-08-30 17:53:43', 0, 0, 0, 'canceled'),
-(13, 3, 12, '5', 150, 15, 100000015, '0.0000', '750.0000', '0.0000', '1080.0000', 'pending', 0, 1, 0, '2016-08-30 17:53:43', 0, 0, 0, 'canceled'),
-(14, 3, 12, '5', 150, 16, 100000016, '0.0000', '750.0000', '0.0000', '780.0000', 'pending', 0, 1, 0, '2016-08-30 18:17:04', 0, 0, 0, 'canceled'),
-(15, 3, 12, '5', 150, 17, 100000017, '0.0000', '750.0000', '0.0000', '780.0000', 'pending', 5, 1, 0, '2016-08-31 20:54:26', 0, 0, 0, 'canceled'),
-(16, 1, 4, '1', 300, 18, 100000018, '0.0000', '300.0000', '0.0000', '330.0000', 'pending', 13, 1, 0, '2016-09-16 17:58:56', 0, 0, 0, 'canceled'),
-(17, 0, 15, '1', 550, 19, 100000019, '0.0000', '0.0000', '0.0000', '580.0000', 'canceled', 0, 1, 1, '2016-09-23 19:28:21', 0, 0, 0, 'pending');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `marketplace_sellerprofile`
---
-
-CREATE TABLE IF NOT EXISTS `marketplace_sellerprofile` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `seller_id` int(11) NOT NULL,
-  `store_title` varchar(50) NOT NULL,
-  `state` varchar(25) NOT NULL,
-  `country` varchar(25) NOT NULL,
-  `contact` varchar(20) DEFAULT NULL,
-  `store_banner` varchar(150) NOT NULL,
-  `store_logo` varchar(150) NOT NULL,
-  `description` text NOT NULL,
-  `meta_description` varchar(150) NOT NULL,
-  `meta_keyword` varchar(150) NOT NULL,
-  `twitter_id` varchar(100) NOT NULL,
-  `facebook_id` varchar(100) NOT NULL,
-  `google_id` varchar(100) NOT NULL,
-  `linked_id` varchar(100) NOT NULL,
-  `bank_payment` varchar(250) NOT NULL,
-  `paypal_id` varchar(35) NOT NULL,
-  `show_profile` tinyint(4) NOT NULL,
-  `commission` decimal(12,2) NOT NULL,
-  `setbanner` tinyint(4) NOT NULL,
-  `shipping_cost` int(11) NOT NULL COMMENT 'Shipping Cost',
-  `national_shipping_cost` int(11) NOT NULL COMMENT 'National Shipping Cost',
-  `international_shipping_cost` int(11) NOT NULL COMMENT 'International Shipping Cost',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
-
---
--- Dumping data for table `marketplace_sellerprofile`
---
-
-INSERT INTO `marketplace_sellerprofile` (`id`, `seller_id`, `store_title`, `state`, `country`, `contact`, `store_banner`, `store_logo`, `description`, `meta_description`, `meta_keyword`, `twitter_id`, `facebook_id`, `google_id`, `linked_id`, `bank_payment`, `paypal_id`, `show_profile`, `commission`, `setbanner`, `shipping_cost`, `national_shipping_cost`, `international_shipping_cost`) VALUES
-(1, 1, 'Happy Client', 'CA', 'US', '8940078523', 'banner2.jpg', 'logo-3.jpg', '', '', '', 'https://www.twitter.com/example', 'https://www.facebook.com/example', 'https://plus.google.com/s/example', 'https://www.linkedin.com/company/example', '', 'varun.p@contus.in', 1, '0.00', 0, 0, 0, 0),
-(2, 2, 'Ross store', 'Tamilnadu', 'IN', '8940078523', '', 'logo-4.jpg', '', '', '', 'https://www.twitter.com/example', 'https://www.facebook.com/example', 'https://plus.google.com/s/example', 'https://www.linkedin.com/company/example', '', 'ramachandran.g@contus.in', 0, '0.00', 0, 0, 0, 0),
-(3, 3, 'Divy', 'Delhi', 'IN', '9582025883', '', '', '', '', '', 'https://www.twitter.com/example', 'https://www.facebook.com/example', 'https://plus.google.com/s/example', 'https://www.linkedin.com/company/example', 'wefrsedgrerg', '', 0, '0.00', 0, 0, 0, 0);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `marketplace_sellerreview`
---
-
-CREATE TABLE IF NOT EXISTS `marketplace_sellerreview` (
-  `seller_review_id` int(11) NOT NULL AUTO_INCREMENT,
-  `product_id` int(11) NOT NULL,
-  `seller_id` int(11) NOT NULL,
-  `customer_id` int(11) NOT NULL,
-  `rating` int(11) NOT NULL,
-  `review` text NOT NULL,
-  `store_id` int(11) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `status` tinyint(4) NOT NULL,
-  PRIMARY KEY (`seller_review_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `marketplace_subscribedinfo`
---
-
-CREATE TABLE IF NOT EXISTS `marketplace_subscribedinfo` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `seller_id` int(11) NOT NULL,
-  `plan_id` int(11) NOT NULL,
-  `paid_date` date NOT NULL,
-  `invoice_id` varchar(150) NOT NULL,
-  `status` varchar(50) NOT NULL,
-  `paypal_verify` varchar(150) NOT NULL,
-  `admin_approval` varchar(150) NOT NULL,
-  `upgrade_to` varchar(15) NOT NULL,
-  `old_active_date` date NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `marketplace_subscriptionpayments`
---
-
-CREATE TABLE IF NOT EXISTS `marketplace_subscriptionpayments` (
-  `payment_id` int(11) NOT NULL AUTO_INCREMENT,
-  `invoice` varchar(150) NOT NULL,
-  `amount` int(11) NOT NULL,
-  `txn_code` varchar(150) NOT NULL,
-  `item_no` int(11) NOT NULL,
-  `status` varchar(50) NOT NULL,
-  `paid_date` date NOT NULL,
-  `customer_id` int(11) NOT NULL,
-  `item_name` varchar(150) NOT NULL,
-  PRIMARY KEY (`payment_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `marketplace_subscriptionplans`
---
-
-CREATE TABLE IF NOT EXISTS `marketplace_subscriptionplans` (
-  `plan_id` int(11) NOT NULL AUTO_INCREMENT,
-  `plan_name` varchar(120) NOT NULL,
-  `subscription_period` int(11) NOT NULL,
-  `validity_period` int(11) NOT NULL,
-  `offer_period` int(11) NOT NULL,
-  `offer_validity_period` int(11) NOT NULL DEFAULT '0',
-  `product_count` int(11) NOT NULL,
-  `product_type` int(11) NOT NULL DEFAULT '0',
-  `yearly_fee` int(11) NOT NULL,
-  `flag` int(11) NOT NULL,
-  `commission` varchar(120) NOT NULL,
-  `commission_fixed` varchar(120) NOT NULL,
-  PRIMARY KEY (`plan_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `marketplace_transaction`
 --
 
@@ -300,7 +125,7 @@ CREATE TABLE IF NOT EXISTS `newsletter_subscriber` (
   PRIMARY KEY (`subscriber_id`),
   KEY `IDX_NEWSLETTER_SUBSCRIBER_CUSTOMER_ID` (`customer_id`),
   KEY `IDX_NEWSLETTER_SUBSCRIBER_STORE_ID` (`store_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Newsletter Subscriber' AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Newsletter Subscriber' AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `newsletter_subscriber`
@@ -309,8 +134,7 @@ CREATE TABLE IF NOT EXISTS `newsletter_subscriber` (
 INSERT INTO `newsletter_subscriber` (`subscriber_id`, `store_id`, `change_status_at`, `customer_id`, `subscriber_email`, `subscriber_status`, `subscriber_confirm_code`) VALUES
 (1, 1, NULL, 4, 'dwivedidesh@gmail.com', 1, '7rwi23hnofrb28th04kpd4mu4suiu64s'),
 (2, 1, NULL, 5, 'krishankirti9@gmail.com', 1, 'm5ol9n9fswqo2l2st20yi57oesfk65qx'),
-(3, 1, NULL, 3, 'c.divyadarshan@gmail.com', 1, 'kysgpnn7vlnquugs2dxws6julzflctfk'),
-(4, 1, NULL, 13, 'pankajbaranwal.1996@gmail.com', 1, 'wgmsfmnnwxm3hv2uhxdkfnw2k7rq4xua');
+(3, 1, NULL, 3, 'c.divyadarshan@gmail.com', 1, 'kysgpnn7vlnquugs2dxws6julzflctfk');
 
 -- --------------------------------------------------------
 
@@ -555,29 +379,16 @@ CREATE TABLE IF NOT EXISTS `persistent_session` (
   UNIQUE KEY `IDX_PERSISTENT_SESSION_CUSTOMER_ID` (`customer_id`),
   KEY `IDX_PERSISTENT_SESSION_UPDATED_AT` (`updated_at`),
   KEY `FK_PERSISTENT_SESSION_WEBSITE_ID_CORE_WEBSITE_WEBSITE_ID` (`website_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Persistent Session' AUTO_INCREMENT=17 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Persistent Session' AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `persistent_session`
 --
 
 INSERT INTO `persistent_session` (`persistent_id`, `key`, `customer_id`, `website_id`, `info`, `updated_at`) VALUES
-(1, 'ClqJk8wGvGERtkvWbJwHilW3vM114zytN1qGMHl4FSowQ06RKT', 3, 1, '{"entity_id":"3","entity_type_id":"1","attribute_set_id":"0","email":"c.divyadarshan@gmail.com","group_id":"4","increment_id":null,"store_id":"1","created_at":"2016-07-03 14:57:34","is_active":"1","disable_auto_group_change":"0"}', '2016-09-23 20:12:28'),
+(1, 'ClqJk8wGvGERtkvWbJwHilW3vM114zytN1qGMHl4FSowQ06RKT', 3, 1, '{"entity_id":"3","entity_type_id":"1","attribute_set_id":"0","email":"c.divyadarshan@gmail.com","group_id":"4","increment_id":null,"store_id":"1","created_at":"2016-07-03 14:57:34","is_active":"1","disable_auto_group_change":"0"}', '2016-08-09 19:39:06'),
 (2, 'fpizDPByPL2HJ9lc4FQTJ65n71ZFFJBVmZfozTeTvLTXT8c2ul', 7, 1, '{"entity_id":"7","entity_type_id":"1","attribute_set_id":"0","email":"kshitishkumar40@gmail.com","group_id":"4","increment_id":null,"store_id":"1","created_at":"2016-07-25 18:12:15","is_active":"1","disable_auto_group_change":"0"}', '2016-08-09 13:17:35'),
-(3, '2RsIL4l2XGK6UZeTn99DNCYyGWDFriZl2R1ph457oXMmQsksqj', 10, 1, '{"entity_id":"10","entity_type_id":"1","attribute_set_id":"0","email":"pankaj@gmail.com","group_id":"1","increment_id":null,"store_id":"1","created_at":"2016-08-09 18:41:59","is_active":"1","disable_auto_group_change":"0"}', '2016-08-09 18:43:07'),
-(4, 'JOacCufNwtgWZO3j5HgDNF6IxXgUJjk6beJ1a7zjIXLTuTKfW2', 5, 1, '{"entity_id":"5","entity_type_id":"1","attribute_set_id":"0","email":"krishankirti9@gmail.com","group_id":"1","increment_id":null,"store_id":"1","created_at":"2016-07-10 21:44:30","is_active":"1","disable_auto_group_change":"0"}', '2016-09-30 19:08:51'),
-(5, 'CsqmmoNyO2LEuYmLjt0mwFVfsW9ytM9fkiYoyoPTWK4TJX923F', 4, 1, '{"entity_id":"4","entity_type_id":"1","attribute_set_id":"0","email":"dwivedidesh@gmail.com","group_id":"1","increment_id":null,"store_id":"1","created_at":"2016-07-10 20:12:22","is_active":"1","disable_auto_group_change":"0"}', '2016-09-12 19:09:55'),
-(6, 't3OwmAqYDZA86rYUVsWkv53DXmoZHKbk3GPZZIuW5HgnR38LSs', 11, 1, '{"entity_id":"11","entity_type_id":"1","attribute_set_id":"0","email":"pbf.freelancer@gmail.com","group_id":"1","increment_id":null,"store_id":"1","created_at":"2016-09-09 17:05:54","is_active":"1","disable_auto_group_change":"0"}', '2016-09-09 22:35:57'),
-(7, '11pzflybL535UxQ5kB3KsohjhAqrZ5l5lJqVzmrAaH9n2AwTCd', 12, 1, '{"entity_id":"12","entity_type_id":"1","attribute_set_id":"0","email":"saurabh10.patel@gmail.com","group_id":"1","increment_id":null,"store_id":"1","created_at":"2016-09-10 02:12:18","is_active":"1","disable_auto_group_change":"0"}', '2016-09-10 10:25:28'),
-(8, 'JV0z0dPggaUr64PgefiGUVIRwtjBKxQdsj15ZzozJ6TOzSRuyD', 13, 1, '{"entity_id":"13","entity_type_id":"1","attribute_set_id":"0","email":"pankajbaranwal.1996@gmail.com","group_id":"1","increment_id":null,"store_id":"1","created_at":"2016-09-10 04:49:03","is_active":"1","disable_auto_group_change":"0"}', '2016-09-28 10:57:27'),
-(9, 'OgcfjrkN4EImyk3Iikph5siOD5kKJWKQVSLGDa4Hb1iVeszIPb', 14, 1, '{"entity_id":"14","entity_type_id":"1","attribute_set_id":"0","email":"undefined","group_id":"1","increment_id":null,"store_id":"1","created_at":"2016-09-10 11:07:40","is_active":"1","disable_auto_group_change":"0"}', '2016-09-20 16:15:12'),
-(10, 'QvdSQDSMWZEQui1XSuWclXwyN7m6dCUMUhQFQt7e38XQ8fsR8K', 15, 1, '{"entity_id":"15","entity_type_id":"1","attribute_set_id":"0","email":"yashkmkrishan@gmail.com","group_id":"1","increment_id":null,"store_id":"1","created_at":"2016-09-17 19:03:21","is_active":"1","disable_auto_group_change":"0"}', '2016-09-17 19:03:34'),
-(11, 'FR9B8p5emd5HaxHbd2nmdXtcRddjtk0EDpN2WpJ5fKnu5Pg1cI', 16, 1, '{"entity_id":"16","entity_type_id":"1","attribute_set_id":"0","email":"polivenialchloride@gmail.com","group_id":"1","increment_id":null,"store_id":"1","created_at":"2016-09-18 07:53:54","is_active":"1","disable_auto_group_change":"0"}', '2016-09-18 13:24:39'),
-(12, 'rCxUxL6hoJznk2NwytxfA7IWijHojRNv8w3oGfBMu5lUgWRsHj', 17, 1, '{"entity_id":"17","entity_type_id":"1","attribute_set_id":"0","email":"kumaran.s@contus.in","group_id":"1","increment_id":null,"store_id":"1","created_at":"2016-09-22 08:12:12","is_active":"1","disable_auto_group_change":"0"}', '2016-09-22 08:32:49'),
-(13, 'XtitdzpAKEjhfuALJbUIlS3AXmUaNW61r2aBXtHfFauxUPd7mC', 18, 1, '{"entity_id":"18","entity_type_id":"1","attribute_set_id":"0","email":"chahat1508@gmail.com","group_id":"1","increment_id":null,"store_id":"1","created_at":"2016-09-23 14:09:39","is_active":"1","disable_auto_group_change":"0"}', '2016-09-23 19:41:03'),
-(14, '6eQ0dSvcUtW8vKU9b268yTTixDAOytIwhk6FkDGJMfzRGRkZUY', 19, 1, '{"entity_id":"19","entity_type_id":"1","attribute_set_id":"0","email":"nagpalkrakshit@gmail.com","group_id":"1","increment_id":null,"store_id":"1","created_at":"2016-09-27 08:35:07","is_active":"1","disable_auto_group_change":"0"}', '2016-09-30 12:27:08'),
-(15, 'cOvIj33OaaAc3v6mVaH1RpaUBZUw5aXdqdoUPFQoA2sPMWG14a', 20, 1, '{"entity_id":"20","entity_type_id":"1","attribute_set_id":"0","email":"nagpalkrakshit1997@gmail.com","group_id":"1","increment_id":null,"store_id":"1","created_at":"2016-09-27 16:57:02","is_active":"1","disable_auto_group_change":"0"}', '2016-09-29 18:22:20'),
-(16, 'jDbQ1akVv4f532kVoh5M7jXOqTNXhNFTEWZTkN4ChKWjnlyDSp', 21, 1, '{"entity_id":"21","entity_type_id":"1","attribute_set_id":"0","email":"lukysense1234@gmail.com","group_id":"1","increment_id":null,"store_id":"1","created_at":"2016-09-27 12:24:22","is_active":"1","disable_auto_group_change":"0"}', '2016-09-27 17:55:23');
+(3, '2RsIL4l2XGK6UZeTn99DNCYyGWDFriZl2R1ph457oXMmQsksqj', 10, 1, '{"entity_id":"10","entity_type_id":"1","attribute_set_id":"0","email":"pankaj@gmail.com","group_id":"1","increment_id":null,"store_id":"1","created_at":"2016-08-09 18:41:59","is_active":"1","disable_auto_group_change":"0"}', '2016-08-09 18:43:07');
 
 -- --------------------------------------------------------
 
@@ -689,7 +500,14 @@ CREATE TABLE IF NOT EXISTS `product_alert_price` (
   KEY `IDX_PRODUCT_ALERT_PRICE_CUSTOMER_ID` (`customer_id`),
   KEY `IDX_PRODUCT_ALERT_PRICE_PRODUCT_ID` (`product_id`),
   KEY `IDX_PRODUCT_ALERT_PRICE_WEBSITE_ID` (`website_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Product Alert Price' AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Product Alert Price' AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `product_alert_price`
+--
+
+INSERT INTO `product_alert_price` (`alert_price_id`, `customer_id`, `product_id`, `price`, `website_id`, `add_date`, `last_send_date`, `send_count`, `status`) VALUES
+(1, 3, 5, '100.0000', 1, '2016-08-07 22:52:19', NULL, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -884,7 +702,56 @@ CREATE TABLE IF NOT EXISTS `report_compared_product_index` (
   KEY `IDX_REPORT_COMPARED_PRODUCT_INDEX_STORE_ID` (`store_id`),
   KEY `IDX_REPORT_COMPARED_PRODUCT_INDEX_ADDED_AT` (`added_at`),
   KEY `IDX_REPORT_COMPARED_PRODUCT_INDEX_PRODUCT_ID` (`product_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Reports Compared Product Index Table' AUTO_INCREMENT=939 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Reports Compared Product Index Table' AUTO_INCREMENT=919 ;
+
+--
+-- Dumping data for table `report_compared_product_index`
+--
+
+INSERT INTO `report_compared_product_index` (`index_id`, `visitor_id`, `customer_id`, `product_id`, `store_id`, `added_at`) VALUES
+(1, NULL, 4, 5, 1, '2016-07-10 20:27:52'),
+(2, NULL, 4, 6, 1, '2016-07-10 20:28:30'),
+(4, 1039, NULL, 11, 1, '2016-07-23 21:28:37'),
+(5, 1039, NULL, 10, 1, '2016-07-23 21:28:50'),
+(6, 1052, 6, 3, 1, '2016-07-24 01:25:27'),
+(7, 1516, NULL, 11, 1, '2016-07-27 08:09:00'),
+(8, 1560, NULL, 10, 1, '2016-07-27 19:47:11'),
+(10, 1560, NULL, 11, 1, '2016-07-27 19:47:22'),
+(11, 2489, NULL, 5, 1, '2016-08-01 13:51:54'),
+(12, 2489, NULL, 3, 1, '2016-08-01 13:52:01'),
+(13, 2489, NULL, 10, 1, '2016-08-01 13:55:07'),
+(14, 2522, NULL, 10, 1, '2016-08-01 15:04:55'),
+(15, 2522, NULL, 11, 1, '2016-08-01 15:03:19'),
+(16, 2522, NULL, 5, 1, '2016-08-01 15:04:24'),
+(17, 2522, NULL, 3, 1, '2016-08-01 15:02:22'),
+(19, 2522, NULL, 4, 1, '2016-08-01 15:04:52'),
+(21, 2522, NULL, 6, 1, '2016-08-01 14:56:33'),
+(25, 2522, NULL, 8, 1, '2016-08-01 15:04:53'),
+(28, 2522, NULL, 12, 1, '2016-08-01 15:04:33'),
+(264, 2560, NULL, 10, 1, '2016-08-01 15:50:48'),
+(265, 2560, NULL, 11, 1, '2016-08-01 15:49:24'),
+(266, 2560, NULL, 5, 1, '2016-08-01 15:50:21'),
+(267, 2560, NULL, 3, 1, '2016-08-01 15:48:35'),
+(269, 2560, NULL, 4, 1, '2016-08-01 15:50:45'),
+(271, 2560, NULL, 6, 1, '2016-08-01 15:43:31'),
+(279, 2560, NULL, 8, 1, '2016-08-01 15:50:47'),
+(282, 2560, NULL, 12, 1, '2016-08-01 15:50:29'),
+(518, 2782, NULL, 6, 1, '2016-08-03 10:50:39'),
+(519, 2782, NULL, 3, 1, '2016-08-03 10:51:09'),
+(520, 3204, NULL, 10, 1, '2016-08-08 12:03:58'),
+(521, 3204, NULL, 3, 1, '2016-08-08 12:03:32'),
+(522, 3204, NULL, 5, 1, '2016-08-08 12:03:47'),
+(523, 3204, NULL, 8, 1, '2016-08-08 12:03:56'),
+(525, 3204, NULL, 4, 1, '2016-08-08 12:03:54'),
+(527, 3204, NULL, 6, 1, '2016-08-08 12:03:20'),
+(532, 3204, NULL, 12, 1, '2016-08-08 12:03:40'),
+(612, 3212, NULL, 10, 1, '2016-08-08 13:40:03'),
+(613, 3212, NULL, 3, 1, '2016-08-08 13:38:18'),
+(614, 3212, NULL, 5, 1, '2016-08-08 13:39:31'),
+(615, 3212, NULL, 8, 1, '2016-08-08 13:40:02'),
+(617, 3212, NULL, 4, 1, '2016-08-08 13:40:00'),
+(619, 3212, NULL, 6, 1, '2016-08-08 13:38:10'),
+(624, 3212, NULL, 12, 1, '2016-08-08 13:39:44');
 
 -- --------------------------------------------------------
 
@@ -906,4 +773,4 @@ CREATE TABLE IF NOT EXISTS `report_event` (
   KEY `IDX_REPORT_EVENT_OBJECT_ID` (`object_id`),
   KEY `IDX_REPORT_EVENT_SUBTYPE` (`subtype`),
   KEY `IDX_REPORT_EVENT_STORE_ID` (`store_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Reports Event Table' AUTO_INCREMENT=2124 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Reports Event Table' AUTO_INCREMENT=1448 ;
